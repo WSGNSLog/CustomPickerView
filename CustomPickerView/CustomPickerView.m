@@ -10,14 +10,10 @@
 
 #define itemHeight 50
 @interface CustomPickerView ()<UIPickerViewDelegate,UIPickerViewDataSource>
-@property (nonatomic,assign)NSInteger indexOne;
-@property (nonatomic,assign)NSInteger indexTwo;
 
 @end
 
 @implementation CustomPickerView{
-    UIButton *upButton;
-    UIButton *downButton;
     UIPickerView *picker;
     NSArray *dataArray;
 }
