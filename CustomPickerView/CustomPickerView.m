@@ -63,7 +63,7 @@
  *  @return pickerView有多少个元素
  */
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return [dataArray count];
+    return 12;
 }
 /**
  *  pickerView代理方法
@@ -139,24 +139,7 @@
 - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component{
     return itemHeight;
 }
-/**
- *  数据源 Setter 方法
- *
- *  @param dataModel 数据数组
- */
--(void)setDataModel:(NSArray *)dataModel{
-    dataArray = dataModel;
-    [picker reloadAllComponents];
-}
 
-/**
- *  数据源 Getter 方法
- *
- *  @return 数据数组
- */
--(NSArray *)dataModel{
-    return dataArray;
-}
 
 /**
  *  pickerView滑动到指定位置

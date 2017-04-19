@@ -34,15 +34,12 @@
 -(void)initPickerView{
     
     NSMutableArray *dataArray = [NSMutableArray array];
-    for (int idx = 0; idx != 13; idx++) {
-        [dataArray addObject:[NSString stringWithFormat:@"%d",idx-10]];
-    }
+    
     CGFloat pk_x = 30;
     CGFloat pk_y = 10;
     _pickerView = [[CustomPickerView alloc]initWithFrame:CGRectMake(pk_x, pk_y, SCREEN_WIDTH-pk_x*2, 110-pk_y*2)];
     _pickerView.delegate = self;
-    _pickerView.dataModel = dataArray;
-    [_pickerView scrollToIndex:[dataArray count]/2];
+    [_pickerView scrollToIndex:12/2];
     
     UIView *bgV = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 110)];
     UIImageView * bgImgV = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 110)];
