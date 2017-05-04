@@ -17,6 +17,8 @@
  @param row 选中的row
  */
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row;
+/** PickerView 开始滚动 */
+- (void)pickerViewBeginScroll;
 @end
 
 @interface CustomPickerView : UIView

@@ -26,7 +26,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self initPickerView];
 }
 
@@ -69,6 +68,9 @@
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row{
     NSLog(@"***selectRow: %ld",row);
+}
+- (void)pickerViewBeginScroll{
+    NSLog(@"pickerViewBeginScroll");
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

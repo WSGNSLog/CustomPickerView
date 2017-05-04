@@ -80,6 +80,10 @@
  */
 -(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
     
+    if ([self.delegate performSelector:@selector(pickerViewBeginScroll)]) {
+        [self.delegate pickerViewBeginScroll];
+    }
+    
     CGAffineTransform rotateItem = CGAffineTransformMakeRotation(M_PI/2);
     rotateItem = CGAffineTransformScale(rotateItem, 1, 10);
     
